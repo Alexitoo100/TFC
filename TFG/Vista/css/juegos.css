@@ -1,0 +1,647 @@
+
+html, body {
+    background-color: #855eda !important;
+    height: 100% !important;
+}
+
+#menu {
+    background-color: #211c42 !important;
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+    width: 100% !important;
+    z-index: 1000;
+}
+
+#menu:hover {
+    opacity: 1;
+}
+
+.lista > li:first-child {
+    margin-left: 15px;
+}
+
+.brand > span {
+    font-family: "action";
+    text-shadow: 2px 2px 2px black;
+    animation-name: cambiar-color;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: #27E1C1 !important;
+    font-size: 2em;
+}
+
+.brand:hover > span {
+    animation-name: tamaño-letra;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes tamaño-letra {
+    from {filter: invert(0);}
+    to {filter: invert(1) hue-rotate(280deg);}
+}
+
+@keyframes cambiar-color {
+    0% {filter: hue-rotate(0deg) drop-shadow(0 0 0.75rem crimson);}
+    100% {filter: hue-rotate(360deg) drop-shadow(0 0 0.75rem blue);}
+}
+
+#seleccion {
+    color: #F7D060 !important;
+}
+
+.card:not(.card-fav) {
+    margin-top: 30px;
+    width: 300px !important;
+    height: 470px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    transition: 1s;
+}
+
+.card-fav {
+    margin-top: 30px;
+    width: 250px !important;
+    height: 400px !important;
+    border-radius: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;
+    transition: 1s;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-juegos {
+    width: fit-content !important;
+}
+
+.card-img {
+    position: absolute;
+    height: 100%;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transition: 1s;
+    transform: translate(-50%, -50%);
+}
+
+#img-juegos-fav {
+    position: absolute;
+    height: 100%;
+    min-width: 50%;
+    top: 50%;
+    left: 50%;
+    transition: 1s;
+    transform: translate(-50%, -50%);
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card:hover .card-img {
+    width: 102%;
+    filter: invert(20%) opacity(0.8);
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 3px solid #fff;
+    font-family: roboto, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    transition: .5s;
+    opacity: 0;
+    color: white !important;
+}
+
+#popupdiv {
+    max-height: fit-content !important;
+    font-weight: bold;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card-title {
+    position: relative;
+    text-transform: capitalize;
+    font-size: 23px;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    z-index: 2;
+}
+
+.div-favoritos {
+    position: sticky;
+    z-index: 2;
+    text-align: right;
+}
+
+.div-favoritos i {
+    cursor: pointer;
+}
+
+.texto-lanzamiento {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.bienvenida-usu {
+    color: white !important;
+    text-shadow: 3px 3px 3px black;
+    margin-right: 10px;
+    animation-name: saltitos;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.fa-eye {
+    text-shadow: none;
+}
+
+@keyframes saltitos {
+    from {
+        transform: translate(0, -3px);
+    }
+
+    to {
+        transform: translate(0, 0px);
+    }
+}
+
+.card-text {
+    position: relative;
+    z-index: 2;
+    display: -webkit-box; /* para compatibilidad con navegadores basados en WebKit */
+    -webkit-line-clamp: 3; /* número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical; /* orientación del contenido */
+    overflow: hidden; /* oculta el texto que se desborda del contenedor */
+    text-overflow: ellipsis; /* agrega puntos suspensivos al final del texto truncado */
+}
+
+.card-body span {
+    position: absolute;
+    width: 25%;
+    height: 0;
+    background: #654E92;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 1s;
+}
+
+.card-body span:nth-child(2) {
+    left: 25%;
+}
+
+.card-body span:nth-child(3) {
+    left: 50%;
+}
+
+.card-body span:nth-child(4) {
+    left: 75%;
+}
+
+.card:hover .card-body span:nth-child(1){
+    height: 100%;
+    transition-delay: .1s;
+}
+
+.card:hover .card-body span:nth-child(2){
+    height: 100%;
+    transition-delay: .4s;
+    background-color: #37306B;
+}
+
+.card:hover .card-body span:nth-child(3){
+    height: 100%;
+    transition-delay: .7s;
+    background-color: #37306B;
+}
+
+.card:hover .card-body span:nth-child(4){
+    height: 100%;
+    transition-delay: .9s;
+}
+
+#logout {
+    cursor: pointer;
+    text-shadow: 3px 3px 3px black;
+    margin-right: 5%;
+}
+
+.administracion {
+    color: white;
+    padding-right: 10px;
+}
+
+.search-bar {
+    display: flex !important;
+    justify-content: end;
+    padding: 1vh !important;
+    background-color: #654E92;
+    
+}
+
+.login > img {
+    height: 3em;
+    transform: translate(-5px);
+}
+
+#favoritos {
+    text-shadow: 3px 3px 3px black;
+    margin-right: 15px;
+}
+
+#favoritos:hover {
+    color: #FFD93D !important;
+    cursor: pointer;
+}
+
+@keyframes saltar {
+    from {position: relative; bottom: 0px;}
+    to {position: relative; bottom: 5px;}
+}
+
+.login:hover > img {
+    animation-name: saltar;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.btn-search {
+   color: white !important;
+   border-color: white !important;
+   background-color: transparent !important;
+}
+
+.btn:hover {
+    border-color: #27E1C1 !important;
+    color: #27E1C1 !important;
+}
+
+.active {
+    text-shadow: 3px 3px 3px black;
+    color: white !important;
+}
+
+.active:hover {
+    color: #FFD93D !important;
+}
+
+.login {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ver-detalles {
+    position: relative;
+    bottom: 5%;
+    border-color: #654E92;
+    background-color: #D4ADFC;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    z-index: 2;
+    height: 50px;
+    width: 150px;
+}
+
+.ver-detalles-fav {
+    position: relative;
+    border-color: #654E92;
+    background-color: #D4ADFC;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    padding: 10px;
+    z-index: 2;
+    height: 50px;
+    width: 100px;
+    width: fit-content;
+}
+
+.ver-detalles:hover, .ver-detalles-fav:hover {
+    background-color: #c48ffa;
+}
+
+.modal-container > .row > .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container > .row:first-child > .col, .modal-container > .row:nth-child(3) > .col {
+    color: #F7D060;
+}
+
+.modal-container > .row:nth-child(2) > .col {
+    color: white;
+}
+
+.modal-title {
+    text-transform: uppercase;
+}
+
+.modal-body {
+    background-color: #37306B;
+}
+
+.busqueda-fav {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.form-control {
+    margin: 5px;
+}
+
+#no-resultados-fav {
+    text-align: center;
+    color: white;
+}
+
+.divisorGenero, .divisorPrecio {
+    margin-right: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divisorGenero label, .divisorPrecio label {
+    color: #FFD93D;
+    margin-right: 1em;
+}
+
+.divisorGenero select, .divisorPrecio input {
+    background-color: #37306B;
+    color: white;
+    border-radius: 4px;
+}
+
+.divisorFiltrado {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: fit-content;
+    margin-left: 10% !important;
+}
+
+.divisorPrecio input {
+    width: 100px;
+    margin: 4px;
+}
+
+.divisorGenero input[type="button"] {
+    margin-left: 20px;
+    padding: 3px;
+    width: fit-content !important;
+    color: white;
+    background-color: #654E92;
+    border-color: white;
+    border-width: 0.5px;
+    border-radius: 4px;
+}
+
+.divisorGenero input[type="button"]:hover {
+    background-color: #4e377c;
+}
+
+#totalGraficos, #totalOptimizacion, #totalJugabilidad {
+    color: white;
+    position: relative;
+    bottom: 0.5em;
+    left: 1vh;
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+.clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+#contenedor-valoraciones, .campo-graficos, .campo-optimizacion, .campo-jugabilidad {
+    position: relative;
+    z-index: 2;
+    top: 1%;
+}
+
+.campo-graficos, .campo-optimizacion, .campo-jugabilidad {
+    margin-left: 5px;
+}
+
+#buscarJuego:hover, #buscarJuegoFav:hover {
+    background-color: #4e377c !important;
+    border-color: #F7D060 !important;
+    color: #F7D060 !important;
+}
+
+#refrescarFiltros {
+    margin-right: 20px;
+    padding: 3px;
+    width: fit-content;
+    color: white;
+    background-color: #654E92;
+    border-color: white;
+    border-width: 0.5px;
+    border-radius: 4px;
+}
+
+#refrescarFiltros:hover {
+    background-color: #4e377c;
+}
+
+.busqueda-main {
+    background-color: #654E92 !important;
+    padding: 10px !important;
+}
+
+.pieDePagina {
+    background-color: #37306B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: fit-content !important;
+}
+
+.enlacesDocumentos {
+    padding: 10px;
+    font-size: 1vw;
+    display: flex;
+    justify-content: end;
+}
+
+.enlacesRedes {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    font-size: 1vw;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.enlacesRedes > .row > div:nth-child(2) {
+    text-align: center;
+    color: white;
+}
+
+.enlacesRedes > .row > .col {
+    height: fit-content !important;
+}
+
+.enlacesDocumentos > ul > li {
+    color: white !important;
+}
+
+.enlacesDocumentos > ul > li > a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.enlacesDocumentos > ul > li > a:hover {
+    text-decoration: none;
+    color: #FFD93D !important;
+}
+
+.fa-brands {
+    margin: 30px;
+}
+
+.fa-brands:hover {
+    filter: opacity(0.7);
+    transition: filter 0.4s;
+}
+
+.panelUsuario {
+    margin-right: 2%;
+}
+
+.modal-body-modificar-usuarios > form > .form-group > label {
+    color: white !important;
+}
+
+.modal-body-modificar-usuarios {
+    background-image: url(../img/newgamers.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+@keyframes avisoMensaje {
+    from {transform: translateY(0px); color: gray;}
+    to {transform: translateY(3px); color: red;}
+}
+
+.video-juegos {
+    margin: 0 !important; 
+}
+
+.mensajeError {
+    text-align: center;
+    animation-name: avisoMensaje;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    visibility: hidden;
+    font-size: medium;
+    color: rgb(49, 48, 48);
+}
+
+.form-group > label {
+    color: white;
+}
+
+.password-show-unshow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.fa-eye {
+    margin: 10px !important;
+}
+
+.fa-eye:hover {
+    color: #FFD93D !important;
+    cursor: pointer !important;
+}
+
+.busqueda-sin-resultados > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100% !important;
+}
+
+.busqueda-sin-resultados  {
+    padding: 3%;
+}
+
+.modal-header {
+    background-color: #855eda;
+    color: white;
+}
+
+.anclado {
+    text-align: center;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.anclado:hover a > * {
+    animation-name: ancla;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 0.8s;
+    color:#FFD93D;
+}
+
+.anclado a {
+    text-decoration: none;
+    color: #1E3050;
+}
+
+@keyframes ancla {
+    from {transform: translate(0, 0px)}
+    to {transform: translate(0, -5px)}
+}

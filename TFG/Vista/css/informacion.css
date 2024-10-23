@@ -1,0 +1,445 @@
+
+html, body {
+    background-color: #855eda !important;
+}
+
+#menu {
+    background-color: #211c42 !important;
+}
+
+.navbar {
+    position: sticky !important;
+    top: 0;
+    opacity: 0.9;
+    width: 100% !important;
+    z-index: 1000;
+}
+
+.menu-buttons {
+    z-index: 1;
+}
+
+.bienvenida-usu {
+    color: white !important;
+    text-shadow: 3px 3px 3px black;
+    margin-right: 10px;
+    animation-name: saltitos;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes saltitos {
+    from {
+        transform: translate(0, -3px);
+    }
+
+    to {
+        transform: translate(0, 0px);
+    }
+}
+
+#logout {
+    text-shadow: 3px 3px 3px black;
+    cursor: pointer;
+}
+
+#logout:hover {
+    color: #FFD93D !important;
+    cursor: pointer;
+}
+
+.navbar:hover {
+    opacity: 1;
+}
+
+.login > img {
+    height: 3em;
+    transform: translate(-5px);
+}
+
+.brand > span {
+    font-family: "action";
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    animation-name: cambiar-color;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: #27E1C1 !important;
+}
+
+.brand:hover > span {
+    animation-name: tamaño-letra;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes tamaño-letra {
+    from {filter: invert(0);}
+    to {filter: invert(1) hue-rotate(280deg);}
+}
+
+#popupdiv {
+    max-height: fit-content !important;
+    font-weight: bold;
+}
+
+.administracion {
+    color: white;
+    padding-right: 10px;
+}
+
+i {
+    margin: 30px;
+}
+
+#seleccion {
+    color: #F7D060 !important;
+}
+
+@keyframes cambiar-color {
+    0% {filter: hue-rotate(0deg) drop-shadow(0 0 0.75rem crimson);}
+    100% {filter: hue-rotate(360deg) drop-shadow(0 0 0.75rem blue);}
+}
+
+.context {
+    height: fit-content;
+    padding: 0 !important;
+}
+
+.context div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.fa-thumbs-up:hover {
+    color: lightgreen;
+    border-color: lightgreen;
+    cursor: pointer;
+}
+
+.fa-thumbs-up {
+    background-color: transparent !important;
+    border: 3px solid rgb(30, 48, 80);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.fa-thumbs-down:hover {
+    color: rgb(238, 84, 84);
+    border-color: rgb(238, 84, 84);
+    cursor: pointer;
+}
+
+.fa-thumbs-down {
+    background-color: transparent !important;
+    border: 3px solid rgb(30, 48, 80);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-search {
+   color: white !important;
+   border-color: white !important;
+   background-color: transparent !important;
+}
+
+.menu-buttons {
+    z-index: 1;
+}
+
+#logout {
+    text-shadow: 3px 3px 3px black;
+    cursor: pointer;
+}
+
+#logout:hover {
+    color: #FFD93D !important;
+    cursor: pointer;
+}
+
+#favoritos {
+    text-shadow: 3px 3px 3px black;
+    margin-right: 15px;
+}
+
+#favoritos:hover {
+    color: #FFD93D !important;
+    cursor: pointer;
+}
+
+.active {
+    text-shadow: 3px 3px 3px black;
+    color: white !important;
+}
+
+.active:hover {
+    color: #FFD93D !important;
+}
+
+.login {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pie {
+    margin-left: 0 !important;
+    margin-top: 2em !important;
+}
+
+.pieDePagina {
+    background-color: #37306B;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: fit-content !important;
+}
+
+.enlacesDocumentos {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.enlacesRedes {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    font-size: 1vw;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-brands:hover {
+    filter: opacity(0.7);
+    transition: filter 0.4s;
+}
+
+.enlacesRedes > .row > div:nth-child(2) {
+    text-align: center;
+    color: white;
+}
+
+.enlacesRedes > .row > .col {
+    height: fit-content !important;
+}
+
+.enlacesDocumentos > ul > li {
+    color: white !important;
+}
+
+.enlacesDocumentos > ul > li > a {
+    color: white !important;
+}
+
+.enlacesDocumentos > ul > li > a:hover {
+    text-decoration: none;
+    color: #FFD93D !important;
+}
+
+.modal-body {
+    background-color: #37306B;
+}
+
+.modal-body-modificar-usuarios {
+    background-image: url(../img/newgamers.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+@keyframes avisoMensaje {
+    from {transform: translateY(0px); color: gray;}
+    to {transform: translateY(3px); color: red;}
+}
+
+.mensajeError {
+    text-align: center;
+    animation-name: avisoMensaje;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    visibility: hidden;
+    font-size: medium;
+    color: rgb(49, 48, 48);
+}
+
+.form-group > label {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.password-show-unshow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.fa-eye {
+    margin: 10px !important;
+    text-shadow: none;
+}
+
+.fa-eye:hover {
+    color: #FFD93D !important;
+    cursor: pointer !important;
+}
+
+.fa-user {
+    font-weight: 0 !important;
+}
+
+.fa-user:hover {
+    font-weight: 900 !important;
+}
+
+.cont-usuario {
+    margin: 0 !important;
+}
+
+.fila-informacion-cabecera {
+    background-color: #F3A712;
+    margin: 0 !important;
+}
+
+.bloque-de-informacion1 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.bloque-de-informacion2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: white;
+    padding: 10%;
+    background: url(../img/anillo.gif) center bottom no-repeat, url(../img/anillo.gif) 30% bottom no-repeat, url(../img/anillo.gif) 70% bottom no-repeat;
+    background-size: 15%;
+    font-size: 2.5vh;
+    text-align: justify;
+    transition: 0.2s;
+}
+
+.bloque-de-informacion2:hover {
+    background: url(../img/anillo.gif) center bottom no-repeat, url(../img/sonic_corriendo.gif) 30% bottom no-repeat, url(../img/anillo.gif) 70% bottom no-repeat;
+    background-size: 15%;
+}
+
+.bloque-de-informacion2 h2 {
+    font-size: 5vh;
+    font-family: "SEGA";
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.bloque-de-informacion2 p {
+    font-family: "digital";
+    padding: 2%;
+}
+
+.bloque-de-informacion3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: white;
+    padding: 10%;
+    background: url(../img/bloque_mario.jpg) center bottom no-repeat, url(../img/ladrillo.webp) 30% bottom no-repeat, url(../img/ladrillo.webp) 70% bottom no-repeat;
+    background-size: 15%;
+    font-size: 2.5vh;
+    text-align: justify;
+    height: fit-content;
+    transition: 0.2s;
+}
+
+.bloque-de-informacion3:hover {
+    background: url(../img/flor_fuego.png) center bottom no-repeat, url(../img/ladrillo.webp) 30% bottom no-repeat, url(../img/ladrillo.webp) 70% bottom no-repeat;
+    background-size: 15%;
+}
+
+.bloque-de-informacion3 p {
+    font-family: "digital";
+    padding: 2%;
+}
+
+.bloque-de-informacion4 {
+    padding: 2%;
+}
+
+.bloque-de-informacion3 h2 {
+    font-size: 5vh;
+    font-family: "mario";
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.fila-informacion-cuerpo {
+    background-color: #aa24b1;
+    margin: 0 !important;
+}
+
+.fila-informacion-pie {
+    margin: 0 !important;
+}
+
+.bloque-de-informacion5 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.bloque-de-informacion6 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: white;
+    padding: 7%;
+    background: url(../img/energytank.gif) center bottom/15% no-repeat, url(../img/energytank.gif) 30% bottom/15% no-repeat, url(../img/energytank.gif) 70% bottom/15% no-repeat;
+    font-size: 2.5vh;
+    text-align: justify;
+    height: fit-content;
+    transition: 0.2s;
+}
+
+.bloque-de-informacion6:hover {
+    background: url(../img/energytank.gif) center bottom/15% no-repeat, url(../img/energytank.gif) 30% bottom/15% no-repeat, url(../img/megamandisparo.gif) 70% bottom/20% no-repeat;
+}
+
+.bloque-de-informacion6 p {
+    font-family: "digital";
+    padding: 5%;
+}
+
+.bloque-de-informacion6 h2 {
+    font-size: 5vh;
+    font-family: "megaman";
+    text-decoration: underline;
+    text-underline-offset: 7px;
+}
+
+.modal-header {
+    background-color: #855eda;
+    color: white;
+}
+

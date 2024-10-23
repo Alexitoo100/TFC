@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "action";
+    src: url(../fonts/ActionComics/Inversionz\ Italic.ttf);
+}
+
+@font-face {
+    font-family: "digital";
+    src: url(../fonts/Digital/Digitalt.ttf);
+}
+
+@font-face {
+    font-family: "mario";
+    src: url(../fonts/SuperMario/SuperMario256.ttf);
+}
+
+@font-face {
+    font-family: "SEGA";
+    src: url(../fonts/SEGA/NiseSegaSonic.TTF);
+}
+
+@font-face {
+    font-family: "megaman";
+    src: url(../fonts/Megaman2/megaman_2.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');

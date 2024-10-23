@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/informacion.css" rel="stylesheet" type="text/css">
+    <link href="../css/fuentes.css" rel="stylesheet" type="text/css">
+    <script src="../../Controlador/JQuery/JQuery.js" type="text/javascript"></script>
+    <link rel="icon" href="../img/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha512-NXUhxhkDgZYOMjaIgd89zF2w51Mub53Ru3zCNp5LTlEzMbNNAjTjDbpURYGS5Mop2cU4b7re1nOIucsVlrx9fA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Inicio</title>
+</head>
+<body>
+
+  <!-- Modal ver datos del usuario -->
+  <div class="modal fade" id="verDatosUsuario" tabindex="-1" aria-labelledby="verDatosUsuarioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="verDatosUsuarioLabel">Tus datos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-ver-datos-usuarios">
+          <form>
+            <div class="form-group">
+              <label for="username-text-show-data" class="col-form-label">Nombre de usuario:</label>
+              <input type="text" class="form-control" id="username-text-show-data" readonly>
+            </div>
+            <div class="form-group">
+              <label for="name-text-show-data" class="col-form-label">Nombre:</label>
+              <input type="text" class="form-control" id="name-text-show-data" readonly>
+            </div>
+            <div class="form-group">
+              <label for="surname-text-show-data" class="col-form-label">Apellidos:</label>
+              <input type="text" class="form-control" id="surname-text-show-data" readonly>
+            </div>
+            <div class="form-group">
+              <label for="mail-text-show-data" class="col-form-label">Correo electronico:</label>
+              <input type="email" class="form-control" id="mail-text-show-data" readonly>
+            </div>
+            <div class="form-group">
+              <label for="password-text" class="col-form-label">Contraseña:</label>
+              <div class="password-show-unshow"><input type="password" class="form-control" id="password-text" value="" readonly>
+                <i class="fa-solid fa-eye fa-xl" style="color: #ffffff;"></i></div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal modificar datos del usuario -->
+  <div class="modal fade" id="modificarDatosUsuario" tabindex="-1" aria-labelledby="modificarDatosUsuarioLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modificarDatosUsuarioLabel">Modifica tus datos</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-modificar-usuarios">
+          <form>
+            <div class="form-group">
+              <label for="user-name" class="col-form-label">Nombre de usuario:</label>
+              <input type="text" class="form-control" id="username-text">
+            </div>
+            <div class="form-group">
+              <label for="name-text" class="col-form-label">Nombre:</label>
+              <input type="text" class="form-control" id="name-text">
+            </div>
+            <div class="form-group">
+              <label for="surname-text" class="col-form-label">Apellidos:</label>
+              <input type="text" class="form-control" id="surname-text">
+            </div>
+            <div class="form-group">
+              <label for="mail-text" class="col-form-label">Correo electronico:</label>
+              <input type="email" class="form-control" id="mail-text">
+            </div>
+            <div class="form-group">
+              <label for="prev-password-text" class="col-form-label">Contraseña Actual:</label>
+              <input type="password" class="form-control" id="prev-password-text" placeholder="Introduce la contraseña actual...">
+              <label for="new-password-text" class="col-form-label">Contraseña Nueva:</label>
+              <input type="password" class="form-control" id="new-password-text" placeholder="Introduce la contraseña nueva...">
+            </div>
+            <div class="mensajeError"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary guardar-cambios-usuario">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-body-tertiary" id="menu">
+        <div class="container-fluid menu-buttons">
+          <a class="navbar-brand brand" href="./index.html"><span>NEWGAMERS</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="juegos.html">Juegos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="seleccionForo.html">Foros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="seleccion" href="informacion.html">Sobre nosotros</a>
+              </li>
+            </ul>
+            <a class="nav-link active login" href="./iniciarsesion.html"><img class="img-fluid" src="../img/misc_game_multiplayer-512.webp">Iniciar Sesion</a><br>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid context">
+        <div class="row fila-informacion-cabecera">
+          <div class="col col-sm-4 col-md-4 col-4 bloque-de-informacion1"><img src="../img/sonic.png" class="img-fluid"></div>
+          <div class="col col-sm-8 col-md-8 col-8 bloque-de-informacion2"><h2>Quienes somos</h2><p>Nosotros somos una plataforma dedicada al catalogado y clasificacion
+            de videojuegos, que van desde los juegos más populares y más antiguos a los más recientes y menos conocidos. Newgamers es la plataforma perfecta para que el usuario
+            menos familiarizado y con menos noción sobre videojuegos pueda seleccionar el juego perfecto para empezar y introducirse en el mundo de los videojuegos.
+            Además, en el caso de que algun usuario no encuentre una orientación adecuada a lo que quiere siempre podrá contar con la ayuda necesaria y asistida para ayudarle
+            en lo que necesite.
+          </p></div>
+        </div>
+
+        <div class="row fila-informacion-cuerpo">
+          <div class="col col-sm-6 col-md-6 col-6 bloque-de-informacion3">
+            <h2>Cual es nuestro objetivo</h2><p>Nuestro objetivo es acercarte al mundo del Gaming, es decir, ayudar a familiarizarte con el sector de los videojuegos,
+              donde actualmente 3,200 millones de personas ya son jugadores habituales y los cuales han podido disfrutar de entregas muy buenas, como Halo, Gears of War, Call of Duty,
+              Grand Theft Auto, Need for Speed, Fornite, Minecraft, entre otros...
+            </p>
+          </div>
+          <div class="col col-sm-6 col-md-6 col-6 bloque-de-informacion4"><img src="../img/mario.png" class="img-fluid"></div>
+        </div>
+
+        <div class="row fila-informacion-pie">
+          <div class="col col-sm-5 col-md-5 col-5 bloque-de-informacion5"><img src="../img/megaman.png" class="img-fluid"></div>
+          <div class="col col-sm-7 col-md-7 col-7 bloque-de-informacion6"><h2>Que te ofrecemos</h2><p>Nuestra misión en NewGamers es ofrecer una plataforma integral que cataloga 
+            y evalúa exhaustivamente cada videojuego lanzado al mercado. Nos dedicamos a brindar a los usuarios una visión completa de cada título, desde sus características 
+            técnicas hasta la calidad de la jugabilidad, permitiéndoles descubrir juegos que se adapten a sus preferencias y nivel de experiencia.</p></div>
+        </div>
+        <div class="row pie row-fluid">
+          <div class="col col-sm-12 col-md-12 col-12 pieDePagina">
+              <div class="row footer">
+                <div class="col col-sm-4 col-md-4 col-4 enlacesDocumentos">
+                  <ul>
+                    <li><a href="#">Soporte técnico</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="#">Terminos y condiciones</a></li>
+                    <li><a href="#">Politica de privacidad</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </div>
+                <div class="col col-sm-8 col-md-8 col-8 enlacesRedes">
+                  <div class="row">
+                    <div class="col col-sm-12 col-md-12 col-12">
+                      <a href="https://twitter.com/home"><i class="fa-brands fa-square-twitter fa-3x" style="color: #508ffb;"></i></a>
+                      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-3x"></i></a>
+                      <a href="https://discord.com/"><i class="fa-brands fa-discord fa-3x" style="color: #3647c9;"></i></a>
+                      <a href="https://www.twitch.tv/"><i class="fa-brands fa-twitch fa-3x" style="color: #8753c6;"></i></a>
+                      <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook fa-3x" style="color: #1866ec;"></i></a>
+                      <a href="https://www.youtube.com/"><i class="fa-brands fa-square-youtube fa-3x" style="color: #dd3c3c;"></i></a>
+                    </div>
+                    <div class="col col-sm-8 col-md-8 col-8">
+                      Copyright © 2023 NewGamers - All rights reserved
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+    <script src="../../Controlador/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cosmogicofficial/quantumalert@latest/minfile/quantumalert.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" integrity="sha512-lOrm9FgT1LKOJRUXF3tp6QaMorJftUjowOWiDcG5GFZ/q7ukof19V0HKx/GWzXCdt9zYju3/KhBNdCLzK8b90Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script src="../../Controlador/obtenerForos.js"></script>
+    <script src="../../Controlador/marcarFavoritosModal.js"></script>
+    <script src="../../Controlador/datosForo.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.4/dist/bootstrap-table.min.js"></script>
+</body>
+</html>

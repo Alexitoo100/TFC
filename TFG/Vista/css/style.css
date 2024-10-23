@@ -1,0 +1,664 @@
+
+html, body {
+    background-color: #855eda !important;
+}
+
+#menu {
+    background-color: #211c42 !important;
+    position: sticky !important;
+    top: 0;
+    opacity: 0.9;
+    width: 100% !important;
+    z-index: 1000;
+}
+
+.menu:hover {
+    opacity: 1;
+}
+
+.login > img {
+    height: 3em;
+    transform: translate(-5px);
+}
+
+.brand > span {
+    font-family: "action";
+    font-size: 2em;
+    text-shadow: 2px 2px 2px black;
+    animation-name: cambiar-color;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: #27E1C1 !important;
+}
+
+.descripcion {
+    text-align: center;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+h2 {
+    color: white !important;
+    font-family: "digital" !important;
+}
+
+.brand:hover > span {
+    animation-name: tamaño-letra;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes tamaño-letra {
+    from {filter: invert(0);}
+    to {filter: invert(1) hue-rotate(280deg);}
+}
+
+@keyframes saltar {
+    from {position: relative; bottom: 0px;}
+    to {position: relative; bottom: 5px;}
+}
+
+#popupdiv {
+    max-height: fit-content !important;
+    font-weight: bold;
+}
+
+.administracion {
+    color: white;
+    padding-right: 10px;
+}
+
+.login:hover > img {
+    animation: saltar;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes cambiar-color {
+    0% {filter: hue-rotate(0deg) drop-shadow(0 0 0.75rem crimson);}
+    100% {filter: hue-rotate(360deg) drop-shadow(0 0 0.75rem blue);}
+}
+
+.context {
+    height: fit-content;
+    padding: 0 !important;
+}
+
+.opinionUsuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content !important;
+    font-family: 'Exo', sans-serif;
+    z-index: 1;
+    padding: 30px;
+    background-image: url(../img/Space-Background-Images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    position: relative;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+    margin: 0 !important;
+    font-family: 'SEGA';
+    width: 100% !important;
+    padding: 10px;
+    margin: 10px;
+    height: 70vh;
+    background-image: url('../img/cabecera.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100%;
+}
+
+.context div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.info p {
+    width: 50%;
+    font-size: 1.4vw;
+    text-align: justify;
+    color: white;
+    margin-right: 2%;
+    text-shadow: 1px 1px 1px black;
+}
+
+.carousel-central {
+    padding: 20px !important;
+    z-index: 1 !important;
+    position: relative;
+    padding: 0 !important;
+    background-color: #855eda !important;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.carousel-central > h2 {
+    text-align: center;
+    margin: 20px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.carousel-item > .row > .col > img {
+    max-height: 40vh;
+    object-fit: contain;
+    width: 100% !important;
+    padding: 20px !important;
+}
+
+.carousel-item > .row > .col > img:hover {
+    cursor: pointer;
+}
+
+.carousel-item > .row > .col {
+    height: fit-content !important;
+    width: fit-content !important;
+}
+
+#textareaOpiniones {
+    width: 25% !important;
+    height: 300px !important;
+    border-radius: 10px;
+}
+
+i {
+    margin: 30px;
+}
+
+.fa-thumbs-up:hover {
+    color: lightgreen !important;
+    border-color: lightgreen !important;
+    cursor: pointer;
+}
+
+.fa-thumbs-up {
+    background-color: transparent !important;
+    border: 3px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.fa-thumbs-down:hover {
+    color: #E84855 !important;
+    border-color: #E84855 !important;
+    cursor: pointer;
+}
+
+.fa-thumbs-down {
+    background-color: transparent !important;
+    border: 3px solid white;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#enviarOpinion {
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#enviarOpinion:hover {
+    background-color: rgb(206, 204, 204);
+    transition: 0.7s;
+}
+
+.carousel-inner {
+    background: rgba(79, 50, 116, 0.8);
+}
+
+.bordes {
+    height: 5px;
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 20px;
+}
+
+.borde1 {
+    margin-bottom: 10px;
+}
+
+.borde2 {
+    margin-top: 10px;
+    margin-bottom: 4%;
+}
+
+.carousel-item > .row > .col:hover > img {
+    transition: transform 0.7s;
+    transform: scale3d(1.1, 1.1, 2.7);
+}
+
+.context button:hover {
+    border-color: orange !important;
+    background-color: rgb(109, 72, 3) rgb(228, 156, 23);
+}
+
+.context a button {
+    text-decoration: none;
+    color: white;
+}
+
+.context a:hover button {
+    color: orange;
+}
+
+.btn-search {
+   color: white !important;
+   border-color: white !important;
+   background-color: transparent !important;
+}
+
+.menu-buttons {
+    z-index: 1;
+}
+
+.bienvenida-usu {
+    color: white !important;
+    text-shadow: 3px 3px 3px black;
+    margin-right: 10px;
+    animation-name: saltitos;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes saltitos {
+    from {
+        transform: translate(0, -3px);
+    }
+
+    to {
+        transform: translate(0, 0px);
+    }
+}
+
+#logout {
+    text-shadow: 3px 3px 3px black;
+    cursor: pointer;
+}
+
+#logout:hover {
+    color: #FFD93D !important;
+    cursor: pointer;
+}
+
+#favoritos {
+    text-shadow: 3px 3px 3px black;
+    margin-right: 15px;
+}
+
+#favoritos:hover {
+    color: #FFD93D !important;
+    cursor: pointer;
+}
+
+.active {
+    text-shadow: 3px 3px 3px black;
+    color: white !important;
+}
+
+.active:hover {
+    color: #FFD93D !important;
+}
+
+.login {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.area{
+    width: 100%;
+    height: 100%;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(2){
+    left: 10%;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.pie {
+    margin-left: 0 !important;
+    margin-top: 2em !important;
+}
+
+.pieDePagina {
+    background-color: #37306B;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: fit-content !important;
+}
+
+.enlacesDocumentos {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.enlacesRedes {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    font-size: 1vw;
+}
+
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-brands:hover {
+    filter: opacity(0.7);
+    transition: filter 0.4s;
+}
+
+.enlacesRedes > .row > div:nth-child(2) {
+    text-align: center;
+    color: white;
+}
+
+.enlacesRedes > .row > .col {
+    height: fit-content !important;
+}
+
+.enlacesDocumentos > ul > li {
+    color: white !important;
+}
+
+.enlacesDocumentos > ul > li > a {
+    color: white !important;
+}
+
+.enlacesDocumentos > ul > li > a:hover {
+    text-decoration: none;
+    color: #FFD93D !important;
+}
+
+.fila-comentarios-juegos {
+    padding: 3% !important;
+    background-image: url(../img/pubg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    position: relative;
+}
+
+.fila-comentarios-juegos > .col {
+    height: fit-content !important;
+    width: fit-content !important;
+}
+
+.fila-comentarios-juegos > h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.separador-card {
+    background-color: #211c42;
+}
+
+.card:hover {
+    cursor: pointer;
+    transition: transform .2s;
+    transform: scale(1.02);
+}
+
+.card-text {
+    display: -webkit-box; /* para compatibilidad con navegadores basados en WebKit */
+    -webkit-line-clamp: 12; /* número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical; /* orientación del contenido */
+    overflow: hidden; /* oculta el texto que se desborda del contenedor */
+    text-overflow: ellipsis; /* agrega puntos suspensivos al final del texto truncado */
+    user-select: none !important;
+}
+
+.card-img-top {
+    pointer-events: none;
+}
+
+.fila-mas-info {
+    margin: 0 !important;
+}
+
+.videoInformativo {
+    text-align: center;
+    padding: 40px;
+    color: white;
+    background-color: #211c42;
+}
+
+.videoInformativo > video{
+    position: relative;
+    box-shadow: 4px 4px 4px black;
+}
+
+.videoInformativo > h1 {
+    position: relative;
+    text-shadow: 2px 2px 2px black;
+}
+
+.lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -20%;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: run 7s 0s infinite;
+            animation: run 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+            z-index: 0;  
+          
+  }
+
+.lines .line:nth-child(1) {
+    margin-left: -25%;
+}
+.lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+}
+.lines .line:nth-child(3) {
+    margin-left: 25%;
+}
+.lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+}
+
+@-webkit-keyframes run {
+0% {
+    top: -20%;
+}
+100% {
+    top: 110%;
+}
+}
+
+@keyframes run {
+0% {
+    top: -20%;
+}
+100% {
+    top: 110%;
+}
+}
+
+.modal-body {
+    background-color: #37306B;
+}
+
+.modal-body-modificar-usuarios {
+    background-image: url(../img/newgamers.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+@keyframes avisoMensaje {
+    from {transform: translateY(0px); color: gray;}
+    to {transform: translateY(3px); color: red;}
+}
+
+.mensajeError {
+    text-align: center;
+    animation-name: avisoMensaje;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    visibility: hidden;
+    font-size: medium;
+    color: rgb(49, 48, 48);
+}
+
+.form-group > label {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+.password-show-unshow {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.fa-eye {
+    margin: 10px !important;
+    text-shadow: none;
+}
+
+.fa-eye:hover {
+    color: #FFD93D !important;
+    cursor: pointer !important;
+}
+
+.fa-user {
+    font-weight: 0 !important;
+}
+
+.fa-user:hover {
+    font-weight: 900 !important;
+}
+
+.cont-usuario {
+    margin: 0 !important;
+}
+
+.modal-header {
+    background-color: #855eda;
+    color: white;
+}
